@@ -1,0 +1,850 @@
+@charset "utf-8";
+
+/*
+The Canadian Comic Bin 
+Website Revamp Project 
+Comp 2680
+
+General Style Sheet
+Author: Logan Hendry T00682135
+Date: November 9th, 2023
+
+Filename: ccb_styles.css
+
+general styles for the Webpage just making everything look good
+*/
+
+/*HTML and Body Styles*/
+*
+{
+    box-sizing: border-box;
+}
+
+html
+{
+    background: rgb(133, 147, 153);
+    /*Google Fonts Font Linked Through HTML file*/
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100%;
+}
+
+/*This Fullfils Requirement 5.2 (e) Part 3*/
+body
+{
+    position: relative;
+    background-color: black;
+    min-height: 100%;
+    margin: 0px auto;
+    min-width: 320px;
+    width: 100%;
+    height: 2000px;
+}
+
+body#home
+{
+    height: 2700px;
+}
+
+
+
+
+
+/*Button Styles*/
+/*This Fullfils Requirement 5.2 (e) Part 2,4 and 6*/
+#backtoTop
+{
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: rgba(252, 176, 64, 1); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+}
+
+#backtoTop:hover
+{
+    background-color: hsla(40, 70%, 75%, 1);
+    color: yellow;
+}
+
+
+
+
+
+/*Header Styles*/
+/*This Fullfils Requirement 5.2 (a) Part 3*/
+header
+{
+    width: 100%;
+    position: relative;
+}
+
+img.logoimg
+{
+    display: block;
+    width: 8%;
+    position: relative;
+}
+
+img#logoAnimation
+{
+    width: 4%;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+/*This Fullfills Requirement 5.5 (b) Part 2*/
+/*Logo Animation*/
+@keyframes logo
+{
+    0%   {left: 0px; top: 0px;}
+    25%  {left: 200px; top: 0px;}
+    50%  {left: 200px; top: 200px;}
+    75%  {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px; transform: rotate(360deg); width: 8%;}
+}
+
+/*This Fullfils Requirement 5.2 (b)*/
+header h1
+{
+    position: absolute;
+    top: 15px;
+    right: 50%;
+    
+}
+
+img#LogoNameimg
+{
+    width: 30%;
+    display: block;
+    position: absolute;
+    right: 37%;
+    top: -40%;
+}
+
+div#headerIcons
+{
+    position: absolute;
+    right: 10%;
+    top: 30px;
+}
+
+div#headerIcons i
+{
+    padding: 20px;
+}
+
+
+
+
+
+/*Navigation List and Horizontal List Styles*/
+nav.horizontal
+{
+    top: auto;
+}
+
+.horizontal
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    flex: 0 1;
+}
+
+/*This Fullfils Requirement 5.2 (a) Part 2
+This Fullfills Requirement 5.2 (c) Part 1*/
+.horizontal ul
+{
+    background: rgba(252, 176, 64, 1);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.horizontal ul li
+{
+    font-size: 1.2em;
+    line-height: 1.4em;
+    height: 1.4em;
+    flex: 1 1;
+}
+
+.horizontal ul li a 
+{
+    display: block;
+    text-align: center;
+}
+
+/*This fullfills Requirement 5.2 (c) Part 2*/
+.horizontal ul li a:hover
+{
+    background-color: hsla(40, 70%, 75%, 1);
+    color: yellow;
+    text-decoration: underline;
+}
+
+
+
+
+
+/*Link or Anchor Styles*/
+a
+{
+    text-decoration: none;
+}
+
+/*This Fullfils Requirement 5.2 (d) Parts 1-3*/
+a:link, a:visited, a:active
+{
+    color: white;
+}
+
+/*This Fullfils Requirement 5.2 (d) Part 4*/
+a:hover
+{
+    color: gold;
+}
+
+
+
+
+
+/*Home Page Section Styles*/
+h2#newsTitle
+{
+    font-size: 2.0em;
+    line-height: 2.0em;
+    position: absolute;
+    top: 7%;
+    left: 28%;
+}
+
+.container
+{
+    position: relative;
+    top: 4%;
+    left: 33%;
+}
+
+.mySlides
+{
+    display: none;
+}
+
+.newsImg
+{
+    width: 30%;
+}
+
+.prev,
+.next
+{
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;    
+}
+
+.next
+{
+    left: 28%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+section#latestIssues
+{
+    position: absolute;
+    top: 28%;
+    left: 30%;
+}
+
+section#latestIssues h2
+{
+    position: relative;
+    font-size: 3.0em;
+    line-height: 2.4em;
+}
+
+section#latestIssues div
+{
+    position: absolute;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    left: 20%;
+}
+
+section#latestIssues div a
+{
+    padding: 20px;
+}
+
+video
+{
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: 500px;
+    left: 8%;
+    top: 200%;
+}
+
+img#cgcimg
+{
+    display: block;
+    width: 30%;
+    position: absolute;
+    top: 60%;
+    right: 36%;
+}
+
+section#contact
+{
+    position: absolute;
+    bottom: 8%;
+    left: 56%;
+}
+
+section#contact img#map
+{
+    display: block;
+    width: 100%;
+    position: absolute;
+    right: 150%;
+}
+
+section#contact h2
+{
+    font-size: 3.0em;
+    line-height: 2.4em; 
+}
+
+/*This Fullfils Requirement 5.2 (a) Part 1*/
+section#contact address, section#contact p, div#hours p
+{
+    font-size: 1.4em;
+    line-height: 1.5em;
+}
+
+div#hours
+{
+    position: absolute;
+    left: 60%;
+    bottom: 35%;
+}
+
+
+
+
+
+/*Search Page Section Styles*/
+body#searchPage
+{
+    height: 930px;
+}
+
+.dropdown-content 
+{
+    display: none;
+}
+
+.dropbtn 
+{
+    background-color: rgba(252, 176, 64, 1);;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    display: static;
+    margin: 0 0 0 4px;
+    width: 8%;
+    font-size: 1.0em;
+}
+
+.dropbtn:hover
+{
+    cursor: pointer;
+}
+
+.btn
+{
+    width: 8%;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.btn:hover
+{
+    cursor: pointer;
+}
+
+/*This Fullfils Requirement 5.2 (f) Part 2*/
+.comicRow
+{
+    display: grid;
+    margin: 20px;
+}
+
+.row1
+{
+    grid-row: 1;
+}
+
+.row2
+{
+    grid-row: 2;
+}
+
+.col1
+{
+    grid-column: 1;
+}
+
+.col2
+{
+    grid-column: 2;
+}
+
+.col3
+{
+    grid-column: 3;
+}
+
+.col4
+{
+    grid-column: 4;
+}
+
+.gridObject
+{
+    max-width: 200px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+div.comicRow a.singleComic section
+{
+    position: relative;
+
+}
+
+/*This Fullfills Requirement 5.5 (b) Part 1*/
+a.singleComic img.singleComicPic
+{
+    display: block;
+    width: 95%;
+    transition: width 0.5s;
+}
+
+/*This Fullfills Requirement 5.2 (h)*/
+a.singleComic img.singleComicPic:hover
+{
+    opacity: 0.8;
+    width: 100%;
+}
+
+a.singleComic p
+{
+    position: absolute;
+    left: 25%;
+}
+
+
+
+
+
+/*Shopping Cart Styles*/
+body#shoppingCart
+{
+    height: 930px;
+}
+
+/* Order Table Styles */
+#paySection
+{
+    background-color: transparent;
+    
+}
+
+/*This Fullfills Requirement 5.2 (a) Part 5*/
+#orderTable 
+{
+    background-color: rgba(168, 168, 168, 0.5);
+    margin: 0 15%;
+    width: 65%;
+    border-collapse: collapse;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+/*This Fullfills Requirement 5.1 (c)*/
+/*This Fullfills Requirement 5.2 (a) Part 4*/
+/*This Fullfills Requirement 5.2 (e) Part 1*/
+#comicImage
+{
+    background-image: url("Flash_Comic_Temp.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px;
+    width: 200px;
+    height: 150px;
+}
+
+/*This Fullfills Half of Requirement 5.2 (h)*/
+#comicImage:hover
+{
+    opacity: 0.8;
+}
+
+#comicImage a
+{
+    color: transparent;
+    font-size: 13em;
+}
+ 
+#order input 
+{
+    background-color: transparent;
+    border: none;
+    color: rgb(151, 151, 151);
+}
+
+#orderTable td 
+{
+    height: 20px;
+    vertical-align: top;
+}
+ 
+/*#qty {
+    width: 3em;
+}*/
+ 
+td#ComicName
+{
+    width: 15em;
+}
+
+/*This Fullfills Requirement 5.2 (d) Part 1*/
+/*This Fullfills Requirement 5.2 (e) Part 4*/
+/*This Fullfills Requirement 5.2 (e) Part 5
+    /\ above requirement is writen in below line using border shorthand*/
+#orderTable tr:first-of-type 
+{
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+ 
+#orderTable tr td:last-of-type input 
+{
+    text-align: right;
+    border: none;
+}
+ 
+/*This Fullfills Requirement 5.2 (d) Part 2*/
+#orderTable tr:last-of-type td 
+{
+    padding-top: 15px;
+}
+ 
+#orderTable td.rightA 
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+
+
+
+/*Payment Form Styles*/
+/*This Fullfills Requirement 5.2 (a) Part 6*/
+/*This Fullfills Requirement 5.3 (b)*/
+#cards 
+{
+    display: block;
+    clear: left;
+}
+ 
+#footnote 
+{
+    font-size: 1em;
+    text-align: left;
+    margin: 0px 10px 20px 140px;
+}
+ 
+#payment fieldset 
+{
+    border: none;
+}
+ 
+ 
+#cards label:first-of-type 
+{
+    text-align: right;
+    margin-left: 50px;
+}
+
+/*This Fullfills Requirement 5.2 (g) Part 1*/
+#payment legend 
+{
+    font-size: 1.3em;
+    padding: 8px;
+    width: 80%;
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px;
+}
+ 
+ 
+/* Input and Label Styles */
+/*This Fullfills Requirement 5.2 (f) Part 1*/
+#payment label 
+{
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 180px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+}
+ 
+/*This Fullfills Requirement 5.2 (g) Part 2*/
+#payment input, 
+#payment select 
+{
+    display: block;
+    float: left;
+    box-shadow: 0px 0px 15px white;
+    background-color: white;
+}
+ 
+/* Radio Button Styles */
+#payment label.cardLabel 
+{
+    display: inline-block;
+    float: none;
+    width: auto;
+}
+ 
+#cards img 
+{
+    display: inline-block;
+    margin-left: 5px;
+    box-shadow: 0px 0px 10px rgb(85, 76, 64);
+}
+ 
+ 
+#payment input[type='radio'] 
+{
+    display: inline-block;
+    width: auto;
+    float: none;
+    clear: none;
+}
+
+form#payment fieldset#cards {
+    text-align: left;
+    margin-left: 50px;
+ }
+ 
+#payment span 
+{
+    width: 30px;
+    text-align: center;
+    display: block;
+    float: left;
+}
+ 
+#cvc 
+{
+    width: 3em;
+}
+ 
+#subButton 
+{
+    display: block;
+    width: 180px;
+    height: 35px;
+    margin: 15px 0px 10px 200px;
+    background-color: rgba(232, 218, 201, 0.8);
+    font-size: 1.3em;
+    border-radius: 20px;
+    float: none;
+}
+
+/*This Fullfills Requirement 5.2 (d) Part 3*/
+/*This Fullfills Requirement 5.3 (c)*/
+/* Valid and Invalid Styles */
+input:invalid, 
+input:focus:invalid, 
+select:invalid, 
+select:focus:invalid 
+{
+    outline: none;
+    background-color: rgba(221,147,148,0.2);
+}
+ 
+input:valid, 
+input:focus:valid, 
+select:valid, 
+select:focus:valid 
+{
+    outline: none;
+    background-color: none;
+}
+
+
+
+
+
+/*Close up Page Styles*/
+body#itemCloseUp
+{
+    height: 930px;
+}
+
+#returnPage
+{
+    float: left;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 0 0 0 1%;
+}
+
+#comicDetails
+{
+    clear:left;
+    padding: 20px;
+    margin: 0 0 0 5%;
+}
+
+#comicTitle
+{
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    font-size: 2.5em;
+}
+
+#comicDetails h2
+{
+    position: absolute;
+    top: 30%;
+    left: 26%;
+    font-size: 1.8em;
+}
+
+#orderForm
+{
+    position: absolute;
+    top: 65%;
+    left: 26%;
+}
+
+#orderForm h2
+{
+    font-size: 1.6em;
+    padding-bottom: 20px;
+}
+
+#orderForm button a
+{
+    color:black;
+    font-size: 1.4em;
+}
+
+#descriptionTitle
+{
+    font-size: 1.6em;
+    margin-left: 9%;
+}
+
+#description
+{
+    width: 70%;
+    margin-left: 6%;
+}
+
+
+
+
+
+/*Footer Styles*/ 
+footer.horizontal
+{
+    top: 98%;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(252, 176, 64, 1);
+}
+
+#homeFooter
+{
+    top: 98.5%;
+}
+
+footer.horizontal ul li
+{
+    font-size: 1.0em;
+    line-height: 1.2em;
+    height: 1.2em;
+}
+
+#footerIcons
+{
+    background-color: rgba(252, 176, 64, 1);
+}
+
+div#footerIcons i
+{
+    padding: 5px;
+}
+
+#lastUpdated
+{
+    direction: rtl;
+    width: 50%;
+    display: float;
+    float: right;
+    position: relative;
+    bottom: 18px;
+    right: 2px;
+}
+
+/*
+I have more time to do assignment so priorieties for getting things done
+this is task order priorety so number 1 gets done first then the other ones after if i still have time.
+
+1. changing out the pictures to something that is more relevant to the the site
+2. do big document and video. depending on how much time is left, video can come after next tasks.
+3. make the site actually screen size dynamic
+4. make the javascript buttons work properly (filters/ cart)
+5. figure out what the hell is happening with the scroll bar on the home page*/

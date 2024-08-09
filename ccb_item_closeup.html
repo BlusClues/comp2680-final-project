@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            The Canadian Comic Bin 
+            Website Revamp Project 
+            Comp 2680
+
+            Home Page
+            Author: Logan Hendry T00682135
+            Date: November 10th, 2023
+
+            Filename: ccb_item_closeup.html
+
+            when you click on an item that you are interested in it brings you to a detailed
+            close up view so you get a description on what the comic is along with some important
+            information that you may want when viewing it.
+        -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Logan Hendry">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Canadian Comic Bin</title>
+        <link href="ccb_reset.css" rel="stylesheet">
+        <link href="ccb_styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" 
+        rel="stylesheet">
+        <script src="ccb_order.js" async></script>
+        <!--adding icons to the page-->
+        <script src="https://kit.fontawesome.com/13fbb8de0e.js" 
+        crossorigin="anonymous"></script>
+    </head>
+
+
+
+
+
+    <body id="itemCloseUp">
+        <!--The Header of the page
+        follows you while you scroll-->
+        <header>
+            <a href="ccb_home.html"><img src="CCB_Logo.jpg" alt="The Canadian Comic Bin Logo" class="logoimg" /></a>
+
+            <!--Adding icons to the header for user friendly buttons-->
+            <div id="headerIcons">
+                <!--will have to make this one\/ into a search bar probably with the forms stuff-->
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+
+                <a href="ccb_shopping_cart.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+                <a href="#"><i class="fa-solid fa-user fa-2xl"></i></a>
+            </div>
+            
+        </header>
+        
+        <a href="ccb_search.html" id="returnPage">&#8592; Back</a>
+        <div id="comicDetails">
+            <img src="Flash_Comic_Temp.jpg" alt="" />
+            <h1 id="comicTitle">Flash #139</h1>
+            <h2>NM/VF</h2>
+        </div>
+
+        <form id="orderForm" name="orderForm" method="get" action="ccb_shopping_cart.html">
+        <!--<label for="qty">Qty</label>
+            <select name="qty" id="qty">
+                <option value="1" selected>1</option>
+                <option value="2">2</option><option value="3">3</option>
+                <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                <option value="10">10</option>
+            </select>-->
+            <h2 name="cost" id="cost" value="10.00">$10.00</h2>
+            <!--<input type="text" name="totalCost" id="totalCost" size="10" readonly style="color:red;"/><br />-->
+            <button type="submit"><a href="ccb_shopping_cart.html">Add to Cart</a></button>
+        </form>
+
+        <h3 id="descriptionTitle">Description</h3><br />
+        <p id="description">Cover pencils by Carmine Infantino, inks by Murphy Anderson. 
+            1st appearance of Reverse Flash in Menace of the Reverse Flash, 
+            script by John Broome, pencils by Carmine Infantino, inks by Joe Giella; 
+            A time capsule sent directly to the future results in the creation of a 
+            new menace for the Flash...Professor Zoom, the Reverse-Flash. Palisades 
+            Amusement Park ad with Superman. 36 Pages, Full Color. Cover price $0.12.
+        </p>
+
+        <!--Footer
+        This is the same for all the pages-->
+        <footer class="horizontal">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Grading</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <!--Footer Icons for easy access to the companies socials-->
+            <div id="footerIcons">
+                <a href="https://www.facebook.com/CanadaComicBin/" target="_blank">
+                    <i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://twitter.com/CanadaComicBin" target="_blank">
+                    <i class="fa-brands fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/canadacomicbin/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCV65oLYQM_JkLuqtSZHO5cw" target="_blank">
+                    <i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="http://thecanadiancomicbin.tumblr.com/" target="_blank">
+                    <i class="fa-brands fa-tumblr fa-lg"></i></a>
+            </div>
+
+            <!--This Fullfills Requirement 5.1 (g)-->
+            <!--Adding a time stamp for when page was last updated-->
+            <p id="lastUpdated">Last updated: <span id="timestamp"></span></p>
+        </footer>
+
+
+
+
+
+        <!--This Fullfills Requirement 5.6 (a)-->
+        <!--This Fullfills Requirement 5.1 (g)-->
+        <!--script for the timestamp updates-->
+        <script>
+            // Function to update the timestamp
+            function updateTimestamp() 
+            {
+                // Get the current date and time
+                const currentDate = new Date();
+
+                // Format the date and time as a string
+                const timestamp = currentDate.toLocaleString();
+
+                // Update the content of the timestamp element
+                document.getElementById('timestamp').textContent = timestamp;
+            }
+
+            // Call the function to set the initial timestamp
+            updateTimestamp();
+
+            // Add an event listener to the window's load event to update the timestamp on page reload
+            window.addEventListener('load', updateTimestamp);
+        </script>
+    </body>
+</html>

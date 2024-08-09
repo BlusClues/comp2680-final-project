@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            The Canadian Comic Bin 
+            Website Revamp Project 
+            Comp 2680
+
+            Home Page
+            Author: Logan Hendry T00682135
+            Date: November 10th, 2023
+
+            Filename: ccb_search.html
+
+            the page that you are directed to after you search for an item on the home page
+            filled with many filters and pictures for best user access
+        -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Logan Hendry">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Canadian Comic Bin</title>
+        <link href="ccb_reset.css" rel="stylesheet">
+        <link href="ccb_styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" 
+        rel="stylesheet">
+        <script src="ccb_search.js" defer></script>
+        <!--adding icons to the page-->
+        <script src="https://kit.fontawesome.com/13fbb8de0e.js" 
+        crossorigin="anonymous"></script>
+    </head>
+
+
+
+
+
+    <body id="searchPage">
+        <!--The Header of the page
+        follows you while you scroll-->
+        <header>
+            <a href="ccb_home.html"><img src="CCB_Logo.jpg" alt="The Canadian Comic Bin Logo" class="logoimg" /></a>
+
+            <!--Adding icons to the header for user friendly buttons-->
+            <div id="headerIcons">
+                <!--will have to make this one\/ into a search bar probably with the forms stuff-->
+                <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
+
+                <a href="ccb_shopping_cart.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+                <a href="#"><i class="fa-solid fa-user fa-2xl"></i></a>
+            </div>
+            
+        </header>
+        
+
+        
+        
+        <!--drop down filter sort of with click filter nested inside
+            made with help from both these sources \/
+            https://www.w3schools.com/howto/howto_js_filter_dropdown.asp
+            https://www.w3schools.com/howto/howto_js_filter_elements.asp-->
+        <div id="comicFilterContainer">
+            <button  class="dropbtn" id="filterButton1">Graded &#11206;</button>
+            <div id="filterDropdown1" class="dropdown-content">  
+                <button class="btn" onclick="filterSelection('CGC')">CGC</button>
+                <button class="btn" onclick="filterSelection('CBCS')">CBCS</button>
+            </div>
+    
+            <button  class="dropbtn" id="filterButton2">Release Date &#11206;</button>
+            <div id="filterDropdown2" class="dropdown-content">
+                    
+                <!--not sure if they need to have one selected or not-->
+                <button class="btn" onclick="filterSelection('golden')">Golden Age 1939-1954</button>
+                <button class="btn" onclick="filterSelection('silver')">Silver Age 1956-1970</button>
+                <button class="btn" onclick="filterSelection('bronze')">Bronze Age 1970-1986</button>
+                <button class="btn" onclick="filterSelection('modern')">Modern Age 1986-Present</button>
+            </div>
+    
+            <button  class="dropbtn" id="filterButton3">Publisher &#11206;</button>
+            <div id="filterDropdown3" class="dropdown-content">
+                <!--not sure if they need to have one selected or not-->
+                <button class="btn" onclick="filterSelection('marvel')">Marvel</button>
+                <button class="btn" onclick="filterSelection('dc')">DC</button>
+            </div>
+    
+            <button  class="dropbtn" id="filterButton4">Sort By &#11206;</button>
+            <div id="filterDropdown4" class="dropdown-content">
+                <!--not sure if they need to have one selected or not-->
+                <button class="btn" onclick="filterSelection('signed')">Signed</button>
+                <button class="btn" onclick="filterSelection('variant')">Variant</button>
+            </div>
+        </div>
+
+
+        <!--Make a div section either for each comic in the search or each row-->
+        <div class="comicRow">
+            <div class="row1 col1 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="Flash_Comic_Temp.jpg" alt="Flash Comic #139" class="singleComicPic" />
+                        <p>Flash #139<br />$10.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row1 col2 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="Batman_Comic_Temp.png" alt="Batman Comic" class="singleComicPic" />
+                        <p>Batman #1<br />$100.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row1 col3 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="Superman_Comic_Temp.jpg" alt="Superman Comic #139" class="singleComicPic" />
+                        <p>Superman #18<br />$10.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row1 col4 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="Spiderman_Comic_Temp.jpg" alt="Spider-Man Comic #139" class="singleComicPic" />
+                        <p>Spider-Man #15<br />$500.00</p>
+                    </section>
+                </a>
+            </div>
+
+            <div class="row2 col1 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="WonderWoman_Comic_Temp.jpg" alt="Wonder Woman Comic #139" class="singleComicPic" />
+                        <p>Wonder Woman #10<br />$5.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row2 col2 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="GreenLantern_Comic_Temp.jpg" alt="Green Lantern Comic" class="singleComicPic" />
+                        <p>Green Lantern #15<br />$20.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row2 col3 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="Batman_Comic2_Temp.jpg" alt="Batman2 Comic #139" class="singleComicPic" />
+                        <p>Batman #18<br />$100.00</p>
+                    </section>
+                </a>
+            </div>
+            <div class="row2 col4 gridObject">
+                <a href="ccb_item_closeup.html" class="singleComic">
+                    <section>
+                        <img src="IronMan_Comic_Temp.jpg" alt="Iron Man Comic #139" class="singleComicPic" />
+                        <p>Iron Man #27<br />$16.00</p>
+                    </section>
+                </a>
+            </div>
+        </div>
+
+
+
+
+   
+        <!--Footer
+        This is the same for all the pages-->
+        <footer class="horizontal">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Grading</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <!--Footer Icons for easy access to the companies socials-->
+            <div id="footerIcons">
+                <a href="https://www.facebook.com/CanadaComicBin/" target="_blank">
+                    <i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://twitter.com/CanadaComicBin" target="_blank">
+                    <i class="fa-brands fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/canadacomicbin/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCV65oLYQM_JkLuqtSZHO5cw" target="_blank">
+                    <i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="http://thecanadiancomicbin.tumblr.com/" target="_blank">
+                    <i class="fa-brands fa-tumblr fa-lg"></i></a>
+            </div>
+
+            <!--This Fullfills Requirement 5.1 (g)-->
+            <!--Adding a time stamp for when page was last updated-->
+            <p id="lastUpdated">Last updated: <span id="timestamp"></span></p>
+        </footer>
+
+
+
+
+
+        <!--This Fullfills Requirement 5.6 (a)-->
+        <!--This Fullfills Requirement 5.1 (g)-->
+        <!--script for the timestamp updates-->
+        <script>
+            // Function to update the timestamp
+            function updateTimestamp() 
+            {
+                // Get the current date and time
+                const currentDate = new Date();
+
+                // Format the date and time as a string
+                const timestamp = currentDate.toLocaleString();
+
+                // Update the content of the timestamp element
+                document.getElementById('timestamp').textContent = timestamp;
+            }
+
+            // Call the function to set the initial timestamp
+            updateTimestamp();
+
+            // Add an event listener to the window's load event to update the timestamp on page reload
+            window.addEventListener('load', updateTimestamp);
+        </script>
+    </body>
+</html>

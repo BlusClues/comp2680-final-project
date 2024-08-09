@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            The Canadian Comic Bin 
+            Website Revamp Project 
+            Comp 2680
+
+            Home Page
+            Author: Logan Hendry T00682135
+            Date: November 9th, 2023
+
+            Filename: ccb_home.html
+
+            The home page of the website to help you navigate and find the
+            comics that you are looking for
+        -->
+        <!--This Fullfils Requirement 5.1 (e)-->
+        <meta charset="utf-8" />
+        <meta name="author" content="Logan Hendry">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--make viewport look good on all devices
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <title>The Canadian Comic Bin</title>
+        <link href="ccb_reset.css" rel="stylesheet">
+        <link href="ccb_styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" 
+        rel="stylesheet">
+        <script src="ccb_buttons.js" defer></script> 
+        <!--adding icons to the page-->
+        <script src="https://kit.fontawesome.com/13fbb8de0e.js" 
+        crossorigin="anonymous"></script>
+    </head>
+
+
+
+
+    
+    <body id="home">
+        <!--The Header of the page
+        follows you while you scroll-->
+        <header>
+            <!--This Fullfils Requirement 5.1 (b) Part 2-->
+            <img src="CCB_Logo3_Name.png" alt="The Canadian Comic Bin" id="LogoNameimg" />
+            <a href="ccb_home.html"><img src="CCB_Logo.jpg" alt="The Canadian Comic Bin Logo" class="logoimg" id="logoAnimation" /></a>
+
+            <!--Adding icons to the header for user friendly buttons-->
+            <div id="headerIcons">
+                <a href="ccb_search.html"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></a>
+                <a href="ccb_shopping_cart.html"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+                <a href="#"><i class="fa-solid fa-user fa-2xl"></i></a>
+            </div>
+            
+            <!--horizontal navigational bar with buttons to go to other pages-->
+            <!--This Fullfils Requirement 5.1 (a)-->
+            <nav class="horizontal">
+                <ul>
+                    <li><a href="#" onclick="alertFunction()">New Releases</a></li>
+                    <li><a href="#">Graded Comics</a></li>
+                    <li><a href="#">Back Issues</a></li>
+                    <!--<li><a href="#">Supplies</a></li>-->
+                    <li><a href="ccb_crossReferencePage.html">Cross Reference Page</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+
+
+        <!--Back to top bar at the bottom of the page
+        help with how to make this type of button \/    
+        https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
+        <button onclick="topFunction()" id="backtoTop" title="Back to top">Top</button>
+
+        <!--image gallery showing news
+        Copy and paste first thing to add more pictures to the gallery
+        help with how to make this gallery \/    
+        https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+        <img src="Temp.png" alt="Alternating News Pictures" id="newsPictures" />-->
+        <h2 id="newsTitle">News</h2>
+        <div class="container">
+            <div class="mySlides">
+                <img src="ccb_blackFridaySale.jpg" alt="" class="newsImg" width="512" height="400"/>
+            </div>
+
+            <div class="mySlides">
+                <img src="Comic_Convention.png" alt="" class="newsImg" />
+            </div>
+
+            <div class="mySlides">
+                <img src="Upcoming_Comic_Convention.jpg" alt="" class="newsImg" />
+            </div>
+            <!--Next and Previous Buttons-->
+            <!--This Fullfils Requirement 5.1 (d)-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!--Latest back issues section with dates
+        links to the facebook posts that they make with there Latest-->
+        <!--This Fullfils Requirement 5.1 (a)-->
+        <section id="latestIssues">
+            <h2>Latest Back Issues to Hit the Shop</h2>
+            <div>
+                <a href="https://www.facebook.com/CanadaComicBin/videos/330956199612228" 
+                    target="_blank">Oct 3</a>
+                <a href="#">Oct 4</a>
+                <a href="#">Oct 6</a>
+                <a href="#">Oct 19</a>
+            </div>
+
+            <!--This Fullfills Requirement 5.5 (a)-->
+            <!--Video of inventory update-->
+            <video width="600" height="500" controls>
+                <source src="ccb_inventoryUpdate.mp4" type="video/mp4">
+                Update Your Browser to View Video
+            </video>
+        </section>
+
+        <!--CGC Authorized Picture-->
+        <!--This Fullfils Requirement 5.1 (b) Part 1-->
+        <img src="CGC_Authorized.jpg" alt="Certified Guaranty Company Authorized Dealer" id="cgcimg" />
+        <!--address and contact information-->
+        <!--This Fullfils Requirement 5.1 (a)-->
+        <section id="contact">
+            <img src="ccb_map_location.png" alt="Map of Store Location" id="map" /> 
+            <h2>Find Us in Person</h2>
+            <address>
+                Box 1385,<br />
+                7278 Hwy 26,<br />
+                Stayner, Ontario <br />
+                L0M 1S0<br />
+                Canada
+            </address>
+            <div id="hours">
+                <p>
+                    Store Hours:<br />
+                    Wed - 11-6<br />
+                    Thur - 11-5<br />
+                    Fri - 11-5<br />
+                    Sat - 11-4<br />
+                    Sun - 11-3
+                </p>
+            </div>
+            <h2>Contact us</h2>
+            <p>Phone Number: 705-351-0422<br />E-mail: thecanadiancomicbin@gmail.com</p>
+        </section>
+        
+
+
+        
+
+        <!--Footer
+        This is the same for all the pages-->
+        <!--This Fullfils Requirement 5.1 (f)-->
+        <footer class="horizontal" id="homeFooter">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Grading</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <!--Footer Icons for easy access to the companies socials-->
+            <div id="footerIcons">
+                <a href="https://www.facebook.com/CanadaComicBin/" target="_blank">
+                    <i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://twitter.com/CanadaComicBin" target="_blank">
+                    <i class="fa-brands fa-twitter fa-lg"></i></a>
+                <a href="https://www.instagram.com/canadacomicbin/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCV65oLYQM_JkLuqtSZHO5cw" target="_blank">
+                    <i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="http://thecanadiancomicbin.tumblr.com/" target="_blank">
+                    <i class="fa-brands fa-tumblr fa-lg"></i></a>
+            </div>
+
+            <!--This Fullfills Requirement 5.1 (g)-->
+            <!--Adding a time stamp for when page was last updated-->
+            <p id="lastUpdated">Last updated: <span id="timestamp"></span></p>
+        </footer>
+
+
+
+
+
+        <!--This Fullfills Requirement 5.6 (a)-->
+        <!--This Fullfills Requirement 5.1 (g)-->
+        <!--script for the timestamp updates-->
+        <script>
+            // Function to update the timestamp
+            function updateTimestamp() 
+            {
+                // Get the current date and time
+                const currentDate = new Date();
+
+                // Format the date and time as a string
+                const timestamp = currentDate.toLocaleString();
+
+                // Update the content of the timestamp element
+                document.getElementById('timestamp').textContent = timestamp;
+            }
+
+            // Call the function to set the initial timestamp
+            updateTimestamp();
+
+            // Add an event listener to the window's load event to update the timestamp on page reload
+            window.addEventListener('load', updateTimestamp);
+
+
+
+
+            
+            //script to make alert come up when you click tag
+            function alertFunction()
+            {
+                window.alert("This feature will be added at a future date");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            The Canadian Comic Bin 
+            Website Revamp Project 
+            Comp 2680
+
+            Home Page
+            Author: Logan Hendry T00682135
+            Date: November 10th, 2023
+
+            Filename: ccb_shopping_cart.html
+
+            once you go to check out the items are kept here in your shopping cart.
+            very simple to not distract you from your paying for your item  
+        -->
+        <meta charset="utf-8" />
+        <meta name="author" content="Logan Hendry">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Canadian Comic Bin</title>
+        <link href="ccb_reset.css" rel="stylesheet">
+        <link href="ccb_styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" 
+        rel="stylesheet">
+        <script src="ccb_payment.js" async></script>
+        <!--adding icons to the page-->
+        <script src="https://kit.fontawesome.com/13fbb8de0e.js" 
+        crossorigin="anonymous"></script>
+    </head>
+    <body id="shoppingCart">
+        <!--The Header of the page
+        follows you while you scroll-->
+        <header>
+            <h1>My Shopping Cart</h1>
+            <a href="ccb_home.html"><img src="CCB_Logo.jpg" alt="The Canadian Comic Bin Logo" class="logoimg" /></a>
+
+            <!--Adding icons to the header for user friendly buttons-->
+            <div id="headerIcons">
+                <a href="#"><i class="fa-solid fa-user fa-2xl"></i></a>
+            </div>
+        </header>
+        
+
+
+
+        
+        <!--This Fullfills Requirement 5.4-->
+        <section id="paySection">
+            <form id="order" name="order">
+                <table id="orderTable">
+                    <tr>
+                       <td id="comicImage"><a href="ccb_item_closeup.html">.</a></td>
+                        <td>
+                            <input type="text" name="comicName" id="comicName1" readonly />
+                            <h3 id="comicName">Flash #139</h3>
+                        </td>
+                        <td class="rightA">
+                            <input type="text" name="initalCost" id="initalCost1" size="10" readonly />
+                            <h3 id="intialCost">$10.00</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="rightA">SUBTOTAL</td>
+                        <td>
+                            <h3>$10.00</h3>
+                            <input type="text" name="totalCost" id="totalCost1" size="10" readonly  />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <!--This Fullfils Requirement 5.3 (a)-->
+            <!--Form for the Payment section of the page-->
+            <form id="payment" name="payment" method="post" action="co_temp.html">         
+                <fieldset id="creditcard">
+                   <legend>Payment Information</legend>
+       
+                   <label for="cardName">Name*</label>
+                   <input name="cardName" id="cardName" required type="text" />              
+       
+                   <fieldset id="cards">
+                      <label class="cardLabel">Credit Card*</label>
+                      <label class="cardLabel">
+                         <input name="credit" value="amex" type="radio" required />
+                         <img src="co_amex.png" alt="American Express" />
+                      </label>
+                      <label class="cardLabel">               
+                         <input name="credit" value="discover" type="radio" />
+                         <img src="co_discover.png" alt="Discover" />
+                      </label>
+                      <label class="cardLabel">                  
+                         <input name="credit" value="master" type="radio"  />
+                         <img src="co_master.png" alt="MasterCard" />
+                      </label>
+                      <label class="cardLabel">                  
+                         <input name="credit" value="visa" type="radio"  />
+                         <img src="co_visa.png" alt="Visa" />
+                      </label>
+                   </fieldset>          
+       
+                   <label for="cardNumber">Credit Card Number*</label>
+                   <input name="cardNumber" id="cardNumber" required type="text"
+                          pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+       
+                   <label for="expMonth">Expiration Date*</label>
+                   <select id="expMonth" name="expMonth">
+                      <option value="mm">mm</option>
+                      <option value="01">01</option>
+                      <option value="01">02</option>
+                      <option value="01">03</option>
+                      <option value="01">04</option>
+                      <option value="01">05</option>
+                      <option value="01">06</option>
+                      <option value="01">07</option>
+                      <option value="01">08</option>
+                      <option value="01">09</option>
+                      <option value="01">10</option>
+                      <option value="01">11</option>
+                      <option value="01">12</option>
+                   </select>
+                   <span> / </span>
+                   <select id="expYear" name="expYear">
+                      <option value="yy">yy</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                   </select>            
+       
+                   <label for="cvc">CVC*</label>
+                   <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+                </fieldset>
+       
+                <p id="footnote">* - Required Item</p>        
+                <input type="button" id="subButton" value="Submit Payment" />         
+            </form>
+        </section>
+    </body>
+</html>
